@@ -59,3 +59,21 @@ vide absolutely constant output current. A current source
 load.
 
 ## Signals
+
+Sinusoidal signals are the most popular signals around;
+they’re what you get out of the wall plug. If someone says
+something like “take a 10 μ V signal at 1 MHz,” they mean
+a sinewave.
+
+$$ V = A sin 2\pi f t $$
+
+A linear circuit driven by
+a sinewave always responds with a sinewave, although in
+general the phase and amplitude are changed. No other pe-
+riodic signal can make this statement. It is standard prac-
+tice, in fact, to describe the behavior of a circuit by its fre-
+quency response, by which we mean the way the circuit
+alters the amplitude of an applied sinewave as a function
+of frequency.
+
+### Signal amplitudes and decibels
