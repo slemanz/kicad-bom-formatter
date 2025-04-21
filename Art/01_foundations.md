@@ -27,4 +27,35 @@ This is simply (energy/charge) × (charge/time). For V in
 volts and I in amps, P comes out in watts. A watt is a
 joule per second (1W = 1 J/s).
 
-## Relationship between voltage and current: resistors
+### Relationship between voltage and current: resistors
+
+Resistors (I simply proportional to V ),
+capacitors (I proportional to rate of change of V ), diodes
+(I ﬂows in only one direction), thermistors (temperature-
+dependent resistor), photoresistors (light-dependent resis-
+tor), strain gauges (strain-dependent resistor), etc.,
+
+A resistor is made out of some conducting stuff (carbon,
+or a thin metal or carbon ﬁlm, or wire of poor conductivity),
+with a wire or contacts at each end.
+
+The power dissipated by a resistor (or any other device) is
+P = IV .
+
+### Voltage sources and current sources
+
+A real voltage source can supply
+only a ﬁnite maximum current, and in addition it generally
+behaves like a perfect voltage source with a small resis-
+tance in series. Obviously, the smaller this series resistance,
+the better.
+
+Real current sources (a much-
+neglected subject in most textbooks) have a limit to the
+voltage they can provide (called the output-voltage compli-
+ance, or just compliance), and in addition they do not pro-
+vide absolutely constant output current. A current source
+“likes” a short-circuit load and “hates” an open-circuit
+load.
+
+## Signals
