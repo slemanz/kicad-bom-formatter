@@ -137,3 +137,63 @@ Often the source of a signal is some part of the circuit you are working on. But
 nal source is invaluable. They come in three ﬂavors: signal generators, pulse generators, and function generators.
 
 ## Capacitors and ac circuits
+
+Once we enter the world of changing voltages and currents, or “signals,” we encounter two very interesting circuit
+elements that are useless in purely dc circuits: capacitors and inductors. As you will see, these humble devices,
+combined with resistors, complete the triad of passive linear circuit elements that form the basis of nearly all
+circuitry. 
+
+Capacitors are used for waveform generation, ﬁltering, and blocking and bypass applications.
+
+Is a device that has two wires sticking out of it and has the property
+
+$$ Q = CV $$
+
+Its basic form is a pair of closely-spaced metal plates, separated by some insulating material, as in the rolled-
+up “axial-ﬁlm capacitor”.
+
+Emphasize those ﬁrst two applications – bypass and coupling – because they are the most common
+uses of capacitors, and they are easy to understand at the simplest level.
+
+Because a capacitor looks like an open circuit at dc, it lets you couple a varying signal while blocking its average dc
+level. This is a blocking capacitor (also called a coupling capacitor)
+
+Likewise, because a capacitor looks like a short circuit at high frequencies, it suppresses (“bypasses”)
+signals where you don’t want them,
+
+So a capacitor is more complicated than a resistor: the current is not simply proportional to the voltage, but rather
+to the rate of change of voltage. If you change the voltage across a farad by 1 volt per second, you are supplying an
+amp.
+
+When you charge up a capacitor, you’re supplying energy. The capacitor doesn’t get hot; instead, it stores the
+energy in its internal electric ﬁelds.
+
+### RC circuits: V and I versus time
+
+When dealing with ac circuits (or, in general, any circuits that have changing voltages and currents), there are two
+possible approaches. You can talk about V and I versus time, or you can talk about amplitude versus signal frequency.
+Both approaches have their merits, and you ﬁnd yourself switching back and forth according to which description
+is most convenient in each situation.
+
+The product RC is called the time constant of the circuit. For R in ohms and C in farads, the product RC is in seconds.
+A microfarad across 1.0k has a time constant of 1 ms; if the capacitor is initially charged to 1.0 V, the initial current
+is 1.0 mA.
+
+Eventually (when t >> RC), V reaches Vf . (Presenting the “5RC rule of thumb”: a capacitor charges or decays to
+within 1% of its ﬁnal value in ﬁve time constants).
+
+### Unintentional capacitive coupling
+
+Differentiators sometimes crop up unexpectedly, in situations where they’re not welcome.
+
+Real capacitors (the kind you can see, and touch, and pay money for) generally behave according to theory; but they
+have some additional “features” that can cause problems in some demanding applications. For example, all capacitors
+exhibit some series resistance (which may be a function of frequency), and some series inductance.
+
+along with some frequency-dependent parallel resistance. Then there’s a “memory” effect (known as dielectric
+absorption), which is rarely discussed in polite society: if you charge a capacitor up to some voltage V0 and hold it
+there for a while, and then discharge it to 0 V, then when you remove the short across its terminals it will tend to
+drift back a bit toward V0 .
+
+## Inductors and transformers
+
