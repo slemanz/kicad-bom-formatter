@@ -77,3 +77,31 @@ alters the amplitude of an applied sinewave as a function
 of frequency.
 
 ### Signal amplitudes and decibels
+
+In addition to its amplitude, there are several other ways to
+characterize the magnitude of a sinewave or any other sig-
+nal. You sometimes see it speciﬁed by peak-to-peak ampli-
+tude (pp amplitude), which is just what you would guess,
+namely, twice the amplitude. The other method is to give
+the root-mean-square amplitude (rms amplitude).
+
+How do you compare the relative amplitudes of two sig-
+nals? You could say, for instance, that signal X is twice
+as large as signal Y . That’s ﬁne, and useful for many pur-
+poses. But because we often deal with ratios as large as a
+million, it is better to use a logarithmic measure, and for
+this we present the decibel.
+
+Although decibels are ordinarily used to specify the ra-
+tio of two signals, they are sometimes used as an abso-
+lute measure of amplitude. What is happening is that you
+are assuming some reference signal level and expressing
+any other level in decibels relative to it. There are sev-
+eral standard levels (which are unstated, but understood)
+that are used in this way; the most common references are
+(a) 0 dBV (1 V rms); (b) 0 dBm (the voltage correspond-
+ing to 1 mW into some assumed load impedance, which
+for radiofrequencies is usually 50 Ω, but for audio is often
+600 Ω; the corresponding 0 dBm amplitudes).
+
+### Other signals
