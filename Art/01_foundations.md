@@ -105,3 +105,35 @@ for radiofrequencies is usually 50 Ω, but for audio is often
 600 Ω; the corresponding 0 dBm amplitudes).
 
 ### Other signals
+
+- **Ramp:** The ramp is a signal that is simply a voltage rising (or falling) at a
+constant rate.
+
+- **Triangle:**  The triangle wave is a close cousin of the ramp; it is simply
+a symmetrical ramp.
+
+- **Noise:** Signals of interest are often mixed with noise.
+- 
+- **Square wave:** A square wave is a signal that varies in time like
+the sinewave, it is characterized by amplitude and frequency (and perhaps phase).
+The edges of a square wave are not perfectly square; in
+typical electronic circuits the rise time tr ranges from a few
+nanoseconds to a few microseconds.
+
+- **Pulses:** A pulse is a signal that is deﬁned by amplitude and pulse width. You
+can generate a train of periodic (equally spaced) pulses, in
+which case you can talk about the frequency, or pulse repe-
+tition rate, and the “duty cycle,” the ratio of pulse width to
+repetition period (duty cycle ranges from zero to 100%).
+
+- **Steps and spikes:**  Steps and spikes are signals that are talked about a lot but
+are not so often used. They provide a nice way of describing what happens in a circuit.
+
+Pulses and square waves are used extensively in digital electronics, in which predeﬁned voltage levels represent
+one of two possible states present at any point in the circuit. These states are called simply HIGH and LOW, and
+correspond to the 1 (true) and 0 (false) states of Boolean logic.
+
+Often the source of a signal is some part of the circuit you are working on. But for test purposes a ﬂexible sig-
+nal source is invaluable. They come in three ﬂavors: signal generators, pulse generators, and function generators.
+
+## Capacitors and ac circuits
