@@ -211,4 +211,28 @@ transformer, and with a current multiplication inversely proportional to the tur
 
 ## Diodes and diode circuits
 
+The diode is an important and useful two-terminal passive nonlinear device.
+
+### Rectiﬁcation
+
+A rectiﬁer changes ac to dc; this is one of the simplest and most important applications of diodes (which are some-
+times called rectiﬁers).
+
+The preceding rectiﬁed waveforms aren’t good for much as they stand. They’re “dc” only in the sense that they don’t
+change polarity. But they still have a lot of “ripple” (periodic variations in voltage about the steady value) that has
+to be smoothed out in order to generate genuine dc. This we do by attaching a relatively large value capacitor
+
+**Rectiﬁer conﬁgurations for power supplies:**
+
+- Full-wave bridge: In practice, you generally buy the bridge as a prepackaged module. The smallest ones
+come with maximum current ratings of 1 A average.
+
+- Center-tapped full-wave rectiﬁer: The output voltage is half what you get if you use a bridge rectiﬁer. It is not the
+most efﬁcient circuit in terms of transformer design, because each half of the secondary is used only half the time.
+
+### Other diodes circuits
+
+**Split supply:**
+
+
 
