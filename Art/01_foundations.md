@@ -197,3 +197,18 @@ drift back a bit toward V0 .
 
 ## Inductors and transformers
 
+They’re closely related to capacitors: the rate of current change in an inductor
+is proportional to the voltage applied across it.
+
+Putting a constant voltage across an inductor causes the current to rise as a ramp (compare with
+a capacitor, in which a constant current causes the voltage to rise as a ramp).
+
+Inductors let you do neat tricks, such as increasing a and decreasing dc input voltage.
+
+A transformer is a device consisting of two closely coupled coils (called primary and secondary). An ac voltage applied
+to the primary appears across the secondary, with a voltage multiplication proportional to the turns ratio of the
+transformer, and with a current multiplication inversely proportional to the turns ratio. **Power is conserved.**
+
+## Diodes and diode circuits
+
+
