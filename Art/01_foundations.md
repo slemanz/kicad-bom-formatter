@@ -232,7 +232,21 @@ most efﬁcient circuit in terms of transformer design, because each half of the
 
 ### Other diodes circuits
 
-**Split supply:**
+**Split supply:** It gives you split supplies (equal plus and minus voltages), which many circuits need. It is an
+efﬁcient circuit, because both halves of the input waveform are used in each winding section.
+
+**Voltage multipliers:** Think of it as two half-wave rectiﬁer circuits in series. It is ofﬁcially a full-wave rectiﬁer circuit because both
+halves of the input waveform are used – the ripple frequency is twice the ac frequency. Variations of this circuit 
+exist for voltage triplers, quadruplers, etc.
+
+## Regulators
+
+By choosing capacitors that are sufﬁciently large, you can reduce the ripple voltage to any desired level. This brute
+force approach has disadvantages. A better approach to power-supply design is to use enough capacitance to reduce
+ripple to low levels (perhaps 10% of the dc voltage), then use an active feedback circuit
+to eliminate the remaining ripple.
+
+## Circuit applications of diodes
 
 
 
