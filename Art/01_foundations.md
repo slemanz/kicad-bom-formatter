@@ -239,14 +239,29 @@ efﬁcient circuit, because both halves of the input waveform are used in each w
 halves of the input waveform are used – the ripple frequency is twice the ac frequency. Variations of this circuit 
 exist for voltage triplers, quadruplers, etc.
 
-## Regulators
+### Regulators
 
 By choosing capacitors that are sufﬁciently large, you can reduce the ripple voltage to any desired level. This brute
 force approach has disadvantages. A better approach to power-supply design is to use enough capacitance to reduce
 ripple to low levels (perhaps 10% of the dc voltage), then use an active feedback circuit
 to eliminate the remaining ripple.
 
-## Circuit applications of diodes
+### Circuit applications of diodes
 
+**Signal rectiﬁer:** There are other occasions when you use a diode to make a waveform of one polarity only.
 
+**Diode gates:** Another application of diodes, which we will recognize later under the general heading of logic, is
+to pass the higher of two voltages without affecting the lower.
+
+**Diode clamps:** Sometimes it is desirable to limit the range of a signal (i.e., prevent it from exceeding certain
+voltage limits) somewhere in a circuit. 
+
+**Limiter:** This circuit limits the output “swing” (again, a common electronics term) to one diode drop in either
+polarity, roughly ±0.6 V.
+
+**Diodes as nonlinear elements:** To a good approximation the forward current through a diode is proportional to an exponential
+function of the voltage across it at a given temperature. So you can use a diode to generate an output voltage proportional to the
+logarithm of a current.
+
+### Inductive loads and diode protection
 
