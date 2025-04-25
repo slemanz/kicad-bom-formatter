@@ -265,3 +265,12 @@ logarithm of a current.
 
 ### Inductive loads and diode protection
 
+What happens if you open a switch that is providing current to an inductor? Because inductors have the property
+it is not possible to turn off the current suddenly, because that would imply an inﬁnite voltage across the inductor’s
+terminals. What happens instead is that the voltage across the inductor rises abruptly and keeps rising until it forces
+current to ﬂow. The best solution usually is to put a diode across the inductor. When the switch is on, the
+diode is back-biased (from the dc drop across the inductor’s winding resistance). At turn-off the diode goes into
+conduction, putting the switch terminal a diode drop above the positive supply voltage. The diode must be able to handle
+the initial diode current, which equals the steady current that had been ﬂowing through the inductor;
+
+## Impedance and reactance
