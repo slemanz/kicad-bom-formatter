@@ -274,3 +274,34 @@ conduction, putting the switch terminal a diode drop above the positive supply v
 the initial diode current, which equals the steady current that had been ﬂowing through the inductor;
 
 ## Impedance and reactance
+
+Circuits with capacitors and inductors are more complicated than the resistive circuits.
+In addition, circuits containing these components (known collectively as reactive components) “corrupt” input waveforms
+such as square waves.
+
+Larger capacitance has a smaller reactance. And this makes sense, because, for example, if you
+double the value of a capacitor, it takes twice as much current to charge and discharge it through the same voltage
+swing in the same time. For the same reason the reactance decreases as you increase the frequency. 
+So, roughly speaking, we can think of a capacitor as a “frequency-dependent resistor.” Sometimes that’s good
+enough, sometimes it isn’t.
+
+Inductors, like capacitors, have a frequency-dependent reactance; however, here the reactance increases with increasing
+frequency (the opposite of capacitors, where it decreases with increasing frequency). So, in the simplest
+view, a series inductor can be used to pass dc and low frequencies (where its reactance is small) while blocking high
+frequencies (where its reactance is high).
+
+## Other passive components
+
+**Electromechanical devices: switches:** these mundane but important devices seem to wind up in
+most electronic equipment.
+
+**Pushbutton switches:** pushbutton switches are useful for momentary-contact applications.
+
+**Relays:** relays are electrically controlled switches.
+
+**Connectors:** Bringing signals in and out of an instrument, routing signal and dc power around between the various
+parts of an instrument, providing ﬂexibility by permitting circuit boards and larger modules of the instrument to be
+unplugged (and replaced) – these are the functions of the connector, an essential ingredient.
+
+**Lamps, LEDs, and displays:** Flashing lights, screens full of numbers and letters, eerie sounds - these are the stuff
+of science ﬁction movies, and except for the last, they form the subject of lamps and displays.
