@@ -35,4 +35,19 @@ follows the input (the base), less one diode drop:
 **Emitter follower biasing:** When an emitter follower is driven from a preceding stage
 in a circuit, it is usually OK to connect its base directly to the previous stage’s output.
 
-**Current source:**
+**Current source:** Current sources, although often neglected, are as important and as useful as voltage sources.
+They often provide an excellent way to bias transistors, and they are unequaled as “active loads” for super-gain
+ampliﬁer stages and as emitter sources for differential ampliﬁers. Integrators, sawtooth generators, and ramp
+generators need current sources.
+
+**Unity-gain phase splitter:** Sometimes it is useful to generate a signal and its inverse, i.e., two signals 180°
+out of phase. That’s easy to do – just use an emitter-degenerated ampliﬁer with a gain of −1.
+
+**Transconductance:** the measure of how efficiently a transistor converts a small input voltage change into a
+larger output current change. The voltage gain was then simply the ratio of collector (output) voltage swing to base
+(input) voltage swing.
+
+Before jumping into the complexity just ahead, let’s remind ourselves of the four transistor circuits we’ve seen, namely
+the switch, emitter follower, current source, and common emitter ampliﬁer.
+
+## Ebers–Moll model
