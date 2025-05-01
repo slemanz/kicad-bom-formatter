@@ -73,4 +73,38 @@ best transistor candidate.
 That’s because all physical bipolar transistors are subject to the same device physics, and their parameters tend to scale
 with die size and current, etc.
 
+How does the perfect transistor work? A four-transistor circuit known as a diamond transistor
+stage. This circuit is a variation of the cascaded pnp-npn emitter follower.
+
+Texas Instruments calls their perfect transistor (its partnumber is OPA860 ) an Operational Transconductance
+Ampliﬁer (OTA). Other names they use are “Voltage-Controlled Current source,” “Transconductor,” “Macro
+Transistor".
+
+### Current mirrors
+
+The technique of matched base–emitter biasing can be used to make what is called a current mirror, an interesting
+current-source circuit that simply reverses the sign of a “programming” current.
+
+There are additional nice tricks you can do with current mirrors, such as generating multiple independent outputs,
+or an output that is a ﬁxed multiple of the programming current.
+
+### Differential ampliﬁers
+
+The differential ampliﬁer is a very common conﬁguration used to amplify the difference voltage between two input
+signals. In the ideal case the output is entirely independent of the individual signal levels – only the difference matters.
+
+Some nomenclature: when both inputs change levels together, that’s a common-mode input change. A differential
+change is called normal mode, or sometimes differential mode. A good differential ampliﬁer has a high common-
+mode rejection ratio (CMRR), the ratio of response for a normal-mode signal to the response for a common-mode
+signal of the same amplitude. CMRR is usually speciﬁed in decibels.
+
+Because of its high gain and stable characteristics, the differential ampliﬁer is the main building block of the
+comparator, , a circuit that tells which of two inputs is larger. They are used for all sorts
+of applications: switching on lights and heaters, generating square waves from triangles, detecting when a level in
+a circuit exceeds some particular threshold, class-D ampliﬁers and pulse-code modulation, switching power supplies,
+etc. The basic idea is to connect a differential ampliﬁer so that it turns a transistor switch on or off, depending on the
+relative levels of the input signals. The linear region of ampliﬁcation is ignored, with one or the other of the two
+input transistors cut off at any time.
+
+## Some ampliﬁer building blocks
 
