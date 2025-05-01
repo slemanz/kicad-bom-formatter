@@ -51,3 +51,26 @@ Before jumping into the complexity just ahead, let’s remind ourselves of the f
 the switch, emitter follower, current source, and common emitter ampliﬁer.
 
 ## Ebers–Moll model
+
+The Ebers-Moll model is a simplified representation of a Bipolar Junction Transistor (BJT) that uses two diodes and two
+current sources to model its behavior, particularly in DC biasing circuits.
+
+We thought of the transistor as a current ampliﬁer whose input circuit behaved like a
+diode. That’s roughly correct, and for some applications it’s good enough.
+
+Although the Ebers–Moll equation tells us that the base–emitter voltage “programs” the collector current, this
+property is not easy to use in practice (biasing a transistor by applying a base voltage) because of the large
+temperature coefﬁcient of base–emitter voltage
+
+### An aside: the perfect transistor
+
+Looking at BJT transistor properties like the non-zero
+(and temperature-dependent) VBE , the ﬁnite (and current-dependent) emitter impedance re and transconductance
+gm , the collector current that varies with collector voltage (Early effect) etc., one is tempted to ask which transistor is
+better? Is there a “best” transistor, or perhaps even a perfect transistor? If you search, you’ll see there is no
+best transistor candidate.
+
+That’s because all physical bipolar transistors are subject to the same device physics, and their parameters tend to scale
+with die size and current, etc.
+
+
