@@ -88,7 +88,7 @@ current-source circuit that simply reverses the sign of a “programming” curr
 There are additional nice tricks you can do with current mirrors, such as generating multiple independent outputs,
 or an output that is a ﬁxed multiple of the programming current.
 
-### Differential ampliﬁers
+### Differential amplifiers
 
 The differential ampliﬁer is a very common conﬁguration used to amplify the difference voltage between two input
 signals. In the ideal case the output is entirely independent of the individual signal levels – only the difference matters.
@@ -108,3 +108,10 @@ input transistors cut off at any time.
 
 ## Some ampliﬁer building blocks
 
+**Push–pull output stages:** amplifier is a type of electronic circuit that uses a pair of active devices that alternately
+supply current to, or absorb current from, a connected load. This kind of amplifier can enhance both the load capacity
+and switching speed.
+
+**Darlington connection:** A Darlington connection, also known as a Darlington pair or Darlington transistor, is a circuit
+comprised of two bipolar junction transistors (BJTs) connected to achieve a high current gain and high input impedance. 
+Behaves like a single transistor with beta equal to the product of the two transistor betas.
