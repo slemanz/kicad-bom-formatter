@@ -115,3 +115,24 @@ and switching speed.
 **Darlington connection:** A Darlington connection, also known as a Darlington pair or Darlington transistor, is a circuit
 comprised of two bipolar junction transistors (BJTs) connected to achieve a high current gain and high input impedance. 
 Behaves like a single transistor with beta equal to the product of the two transistor betas.
+
+**Capacitance and Miller effect:** The Miller effect is a phenomenon in amplifier circuits where the apparent input
+capacitance increases due to the amplifier's voltage gain. At high frequencies
+the effects of capacitance often dominate circuit behavior; at 100 MHz a typical junction capacitance of 5 pF has an
+impedance of just 320 ohms.
+
+## Negative feedback
+
+Feedback offers a cure to some vexing problems.
+Feedback has become such a well-known concept that the word has entered the general vocabulary. In control systems,
+feedback consists of comparing the actual output of the system with the desired output and making a correction
+accordingly.
+
+As used in ampliﬁers, negative feedback is implemented simply by coupling the output back in such a way as to
+cancel some of the input.
+
+A feedback network can be frequency dependent, to produce an equalization ampliﬁer (with speciﬁc gain-versus-frequency
+characteristics), or it can be amplitude dependent, producing a nonlinear ampliﬁer. 
+
+**Gain equation:**
+
