@@ -154,5 +154,9 @@ Real-world circuits usually incorporate op-amps and other ICs.
 
 - Regulated power supply: circuit, negative feedback acts to stabilize the output voltage
 
-- Temperature controller:
+- Temperature controller: a temperature controller based on a thermistor sensing element, a
+device that changes resistance with temperature.
 
+- Simple logic with transistors and diodes: a circuit that performs a task,
+sounding a buzzer if either car door is open and the driver is seated. In this circuit the transistors
+all operate as switches.
