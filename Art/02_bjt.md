@@ -134,5 +134,25 @@ cancel some of the input.
 A feedback network can be frequency dependent, to produce an equalization ampliﬁer (with speciﬁc gain-versus-frequency
 characteristics), or it can be amplitude dependent, producing a nonlinear ampliﬁer. 
 
-**Gain equation:**
+### Effects of feedback on ampliﬁer circuits
+
+- Predictability of gain: The voltage gain is G = A/(1 + AB). In the limit of inﬁnite open-loop gain.
+
+- Input impedance: Feedback can be arranged to subtract a voltage or a current from the input (these are sometimes called
+series feedback and shunt feedback, respectively).
+
+- Output impedance: feedback can extract a sample of the output voltage or the output current. In the ﬁrst case the open-loop output
+impedance will be reduced by the factor 1 + AB, whereas in the second case it will be increased by the same factor.
+
+- Sensing output current: feedback can be connected instead to sample the output current. It is possible to have multiple
+feedback paths, sampling both voltage and current. In the general case the output impedance is given by Blackman’s
+impedance relation.
+
+## Some typical transistor circuits
+
+Real-world circuits usually incorporate op-amps and other ICs.
+
+- Regulated power supply: circuit, negative feedback acts to stabilize the output voltage
+
+- Temperature controller:
 
