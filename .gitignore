@@ -1,0 +1,15 @@
+# Spreadsheets, except the template
+*.xlsx
+!template.xlsx
+*.csv
+
+# PDFs
+*.pdf
+
+# Files open in LibreOffice / Excel
+.~lock.*#
+~$*
+
+# Generated BOMs
+generated/*
+!generated/.gitkeep
