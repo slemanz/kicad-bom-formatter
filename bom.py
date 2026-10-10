@@ -80,6 +80,50 @@ def spread_copy_row_style(ws, row):
     height = ws.row_dimensions[row].height
     return styles, height
 
+def spread_apply_row_style(ws, row, style):
+    """Applies the style stored by spread_copy_row_style to a row"""
+    styles, height = style
+
+    for col in range(1, LAST_COL + 1):
+        cell = ws.cell(row=row, column=col)
+        cell._style = copy.copy(styles[col - 1])
+
+    ws.row_dimensions[row].height = height
+
+def spread_count_lines(text, chars_per_line):
+    """Estimates how many lines a text will wrap to inside the cell"""
+    lines = 1
+    line_length = 0
+
+    for word in text.split(" "):
+        if line_length == 0:
+            line_length = len(word)
+        elif line_length + 1 + len(word) <= chars_per_line:
+            line_length = line_length + 1 + len(word)
+        else:
+            lines = lines + 1
+            line_length = len(word)
+
+    return lines
+
+def spread_row_height(reference, description, base_height):
+    """Increases the row height when Reference or Description wrap onto multiple lines"""
+    reference_lines = spread_count_lines(reference, REFERENCE_CHARS_PER_LINE)
+    description_lines = spread_count_lines(description, DESCRIPTION_CHARS_PER_LINE)
+
+    lines = max(reference_lines, description_lines)
+    extra_lines = lines - 1
+    return base_height + extra_lines * EXTRA_LINE_HEIGHT
+
+def spread_paint_row_red(ws, row):
+    """Colors a row’s text red (used for DNP components)"""
+    for col in range(1, LAST_COL + 1):
+        cell = ws.cell(row=row, column=col)
+        font = copy.copy(cell.font)
+        font.color = DNP_COLOR
+        cell.font = font
+
+
 def main():
     if len(sys.argv) != 2:
         print("Usage: python bom.py path/to/project.csv")
@@ -119,8 +163,49 @@ def main():
 
     ws.delete_rows(FIRST_DATA_ROW, ws.max_row)
 
-    # One line for component
+    # One row for component
+    row = FIRST_DATA_ROW
+    for number, part in enumerate(parts, start=1):
+        if number % 2 == 1:
+            spread_apply_row_style(ws, row, odd_style)
+        else:
+            spread_apply_row_style(ws, row, even_style)
 
+        # “C1,C2” becomes “C1, C2” so the text wraps between references
+        reference = part["Reference"].replace(",", ", ")
+        description = part["Description"]
+
+        base_height = ws.row_dimensions[row].height
+        ws.row_dimensions[row].height = spread_row_height(reference, description, base_height)
+
+        ws.cell(row=row, column=COL_NUMBER, value=number)
+        ws.cell(row=row, column=COL_REFERENCE, value=reference)
+        ws.cell(row=row, column=COL_QTY, value=int(part["Qty"]))
+        ws.cell(row=row, column=COL_DESCRIPTION, value=description)
+        ws.cell(row=row, column=COL_MPN, value=part["MPN"])
+        ws.cell(row=row, column=COL_LCSC, value=part["LCSC"])
+        ws.cell(row=row, column=COL_PACKAGE, value=part["Package"])
+
+        # Unit Price is left empty to be filled in by hand; Total = Qty × Unit Price
+        total_formula = f'=IF(H{row}="","",C{row}*H{row})'
+        ws.cell(row=row, column=COL_TOTAL, value=total_formula)
+
+        if part["DNP"] != "":
+            spread_paint_row_red(ws, row)
+
+        row = row + 1
+
+    last_data_row = row - 1
+
+    spread_apply_row_style(ws, row, total_style)
+    ws.cell(row=row, column=COL_REFERENCE, value="TOTAL")
+    ws.cell(row=row, column=COL_QTY, value=f"=SUM(C{FIRST_DATA_ROW}:C{last_data_row})")
+    ws.cell(row=row, column=COL_TOTAL, value=f"=SUM(I{FIRST_DATA_ROW}:I{last_data_row})")
+
+    # Nota de rodapé, uma linha em branco abaixo do total
+    footer_row = row + 2
+    footer = ws.cell(row=footer_row, column=1, value=footer_text)
+    footer._style = footer_style
 
     wb.save(xlsx_path)
     print("BOM saved to", xlsx_path)
